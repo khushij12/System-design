@@ -14,13 +14,10 @@ CAP(Consistency-Availability-Partition Tolerance) theorem says that a distribute
 **Vertical scaling** refers to the concept of upgrading the resource capacity such as increasing RAM, adding efficient processors etc of a single machine or switching to a new machine with more capacity. The capability of the server can be enhanced without the need for code manipulation.
 
 **Horizontal Scaling / Vertical Scaling**
-Requires load balancing for distributing request traffic across multiple machine / Since there is just one single machine, the load balancer is not required.
-
-More resistant to application failure because if one server fails, traffic is routed to other servers. / This is more prone to failure as there is only one machine and failure of this results in failure of the entire application.
-
-Since there are multiple machines being involved, it is very much necessary to have network communication / Vertical scaling makes use of inter-process communication within the machine which makes it quite fast.
-
-There exist possibilities of data inconsistencies here because there are different machines for handling different requests which might result in data being out of sync.	/ As there is only one machine, there is no issue of data inconsistency.
+1. Requires load balancing for distributing request traffic across multiple machine / Since there is just one single machine, the load balancer is not required.
+2. More resistant to application failure because if one server fails, traffic is routed to other servers. / This is more prone to failure as there is only one machine and failure of this results in failure of the entire application.
+3. Since there are multiple machines being involved, it is very much necessary to have network communication / Vertical scaling makes use of inter-process communication within the machine which makes it quite fast.
+4. There exist possibilities of data inconsistencies here because there are different machines for handling different requests which might result in data being out of sync. / As there is only one machine, there is no issue of data inconsistency.
 
 Since this scaling requires multiple servers, there might be concerns on budget and space but the scaling of the application can be done as much as needed based on the business needs.	/ Vertical scaling has a limit on the capacity of the resources that are achievable. If the resources are scaled up above this limit, then the application might crash and result in downtime.
 
