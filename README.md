@@ -42,8 +42,11 @@ Sharding helps to scale databases by helping to handle the increased load by pro
 
 ## How is NoSQL database different from SQL databases?
 Follows relational model / Follows the non-relational model.
+
 Deals with structured data / Deals with semi-structured data.
+
 SQL follows a strict schema / NoSQL deals with dynamic schema and is very flexible.
+
 Follows ACID (Atomicity, Consistency, Isolation, Durability) properties / Follows BASE (Basic Availability, Soft-state, Eventual consistency) properties.
 
 ## How is sharding different from partitioning?
