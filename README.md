@@ -47,7 +47,8 @@ Deals with structured data / Deals with semi-structured data.
 
 SQL follows a strict schema / NoSQL deals with dynamic schema and is very flexible.
 
-Follows ACID (Atomicity, Consistency, Isolation, Durability) properties / Follows BASE (Basic Availability, Soft-state, Eventual consistency) properties.
+Follows ACID (Atomicity, Consistency, Isolation, Durability) properties / Follows BASE (Basic Availability, Soft-state (The state of the data could change without application interactions due to eventual consistency.), Eventual consistency) properties.
+
 
 ## How is sharding different from partitioning?
 **Database Sharding** - Sharding is a technique for dividing a single dataset among many databases, allowing it to be stored across multiple workstations.
