@@ -67,8 +67,16 @@ Some of the disadvantages of this strategy are:
 1. In cases of a cache miss, there would be a noticeable delay
 2. The chances of data being stale are more if it is updated in the database. This can be reduced by defining the time-to-live parameter which forces an update of the cache entry.
 
-2. **Write-through**: 
+2. **Write-through**: Incomplete....
 
+## What are the various Consistency patterns available in system design?
+Consistency from the CAP theorem states that every read request should get the most recently written data. When there are multiple data copies available, there arises a problem of synchronizing them so that the clients get fresh data consistently. Following are the consistency patterns available:
+
+**Weak consistency:** After a data write, the read request may or may not be able to get the new data. This type of consistency works well in real-time use cases like VoIP, video chat, real-time multiplayer games etc. For example, when we are on a phone call, if we lose network for a few seconds, then we lose information about what was spoken during that time.
+
+**Eventual consistency:** Post data write, the reads will eventually see the latest data within milliseconds. Here, the data is replicated asynchronously. These are seen in DNS and email systems. This works well in highly available systems.
+
+**Strong consistency:** After a data write, the subsequent reads will see the latest data. Here, the data is replicated synchronously. This is seen in RDBMS and file systems and are suitable in systems requiring transactions of data.
 
 ## Design Tic-Tac-Toe game.
 Tic-tac-toe game involves two players where one player chooses 0 and the other player chooses X for marking the cells. The player who fills a row/column/diagonal with their selected character wins.
